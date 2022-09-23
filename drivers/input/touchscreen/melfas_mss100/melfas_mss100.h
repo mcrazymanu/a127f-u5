@@ -271,6 +271,7 @@ struct mms_ts_coordinate {
 struct mms_ts_info {
 	struct i2c_client *client;
 	struct input_dev *input_dev;
+	struct input_dev *input_dev_pad;
 	struct input_dev *input_dev_proximity;
 	char phys[32];
 	struct mms_devicetree_data *dtdata;
@@ -416,6 +417,7 @@ struct mms_devicetree_data {
 	bool support_lpm;
 	bool support_ear_detect;
 	bool support_fod;
+	bool support_dex;
 	bool enable_settings_aot;
 	bool sync_reportrate_120;
 
